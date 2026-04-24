@@ -11,7 +11,7 @@ struct Book {
 
 vector<Book> books;
 
-// Load data from file
+
 void loadData() {
     ifstream file("library.txt");
     Book b;
@@ -23,7 +23,7 @@ void loadData() {
     file.close();
 }
 
-// Save data to file
+
 void saveData() {
     ofstream file("library.txt");
     for(auto &b : books) {
@@ -34,7 +34,7 @@ void saveData() {
     file.close();
 }
 
-// Add Book
+
 void addBook() {
     Book b;
     cin.ignore();
@@ -50,7 +50,7 @@ void addBook() {
     cout << "Book Added Successfully!\n";
 }
 
-// View Books
+
 void viewBooks() {
     if(books.empty()) {
         cout << "No Books Available!\n";
@@ -65,7 +65,7 @@ void viewBooks() {
     }
 }
 
-// Search Book
+
 void searchBook() {
     cin.ignore();
     string key;
@@ -81,7 +81,7 @@ void searchBook() {
     cout << "Book not found!\n";
 }
 
-// Issue Book
+
 void issueBook() {
     viewBooks();
     int n;
@@ -95,7 +95,7 @@ void issueBook() {
     }
 }
 
-// Return Book
+
 void returnBook() {
     viewBooks();
     int n;
@@ -109,7 +109,7 @@ void returnBook() {
     }
 }
 
-// Delete Book
+
 void deleteBook() {
     viewBooks();
     int n;
